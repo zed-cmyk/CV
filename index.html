@@ -1,24 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Agent CV</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <aside class="panel">
-    <div class="brand"><span class="brand-dot"></span><div><strong>Agent CV</strong><small>Configuration live</small></div></div>
-    <section class="box"><h2>Design</h2><label>Modèle</label><select id="templateSelect"><option value="corporate">Corporate Premium</option><option value="minimal">Minimaliste</option><option value="linkedin">LinkedIn Style</option><option value="timeline">Timeline</option><option value="luxury">Luxe Conseil</option><option value="cards">Cartes modernes</option></select><label>Couleur principale</label><input id="accentColor" type="color" value="#123047"><label>Couleur secondaire</label><input id="softColor" type="color" value="#eaf0f4"></section>
-    <section class="box"><h2>Identité</h2><label>Nom</label><input id="name" value="Prénom NOM"><label>Titre</label><input id="title" value="Commerciale B2B"><label>Email</label><input id="email" value="email@example.com"><label>Téléphone</label><input id="phone" value="+33 0 00 00 00 00"><label>Ville</label><input id="location" value="Île-de-France"></section>
-    <section class="box"><h2>Profil</h2><textarea id="profile" rows="7">Commerciale orientée développement et fidélisation, avec une expérience en vente B2B, gestion de comptes clients, appels d'offres et outils CRM. Organisée, autonome et dotée d'un excellent relationnel.</textarea></section>
-    <section class="box"><h2>Compétences</h2><textarea id="skills" rows="7">Prospection multicanale\nNégociation commerciale\nGestion du cycle de vente\nFidélisation client\nRéponse aux appels d'offres\nCRM, Excel, Office</textarea></section>
-    <section class="box"><h2>Expériences</h2><textarea id="experiences" rows="12">Commerciale | Entreprise A | 2024 – 2025 | Paris | Prospection client, fidélisation, propositions commerciales, négociation, suivi des contrats et gestion CRM.\nAssistante commerciale | Entreprise B | 2019 – 2022 | Nanterre | Renouvellement de contrats, ventes additionnelles, gestion de base de données, relances et coordination administrative.\nEmployée administrative | Entreprise C | 2017 – 2018 | Paris | Assistance client, gestion des litiges et suivi administratif.</textarea><small class="hint">Format : Poste | Société | Date | Lieu | Description</small></section>
-    <section class="box"><h2>Formation</h2><textarea id="education" rows="7">Master Négociation Commerciale Internationale | Université | 2014 | Paris\nLicence LEA Anglais-Allemand | Université | 2013 | Paris\nBTS Commerce International | Lycée | 2011 | Île-de-France</textarea></section>
-    <section class="box"><h2>Langues & intérêts</h2><textarea id="languages" rows="4">Français langue maternelle\nAnglais courant\nAllemand notions professionnelles</textarea><textarea id="interests" rows="4">Théâtre\nSport\nEngagement associatif</textarea></section>
-    <div class="actions"><button id="printBtn">Exporter / Imprimer PDF</button><button id="resetBtn" class="secondary">Réinitialiser</button></div>
-  </aside>
-  <main class="workspace"><div class="toolbar"><div><strong>Aperçu direct</strong><span>Modifie à gauche, le CV se met à jour ici.</span></div><span id="templateName" class="pill">Corporate Premium</span></div><section id="cvPreview" class="cv template-corporate"></section></main>
-  <script src="script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agent CV Studio</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
