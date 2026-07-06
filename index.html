@@ -1,12 +1,23 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Agent CV Studio</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV Studio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="panel">
+    <div class="brand"><span></span><div><strong>CV Studio</strong><small>Éditeur live</small></div></div>
+    <div class="tabs"><button data-tab="content" class="active">Contenu</button><button data-tab="design">Design</button><button data-tab="export">Export</button></div>
+    <section class="tab active" id="tab-content">
+      <h2>Identité</h2><label>Nom<input id="name" value="Prénom NOM"></label><label>Titre<input id="title" value="Commerciale B2B"></label><label>Email<input id="email" value="email@example.com"></label><label>Téléphone<input id="phone" value="+33 0 00 00 00 00"></label><label>Ville<input id="city" value="Île-de-France"></label><label>Photo<input id="photo" type="file" accept="image/*"></label>
+      <h2>Sections</h2><label>Profil<textarea id="profile" rows="5">Commerciale orientée développement et fidélisation, avec une expérience en vente B2B, gestion de comptes clients, appels d'offres et outils CRM. Organisée, autonome et dotée d'un excellent relationnel.</textarea></label><label>Compétences<textarea id="skills" rows="6">Prospection multicanale\nNégociation commerciale\nGestion du cycle de vente\nFidélisation client\nRéponse aux appels d'offres\nCRM, Excel, Office</textarea></label><label>Expériences<textarea id="experiences" rows="9">Commerciale | Entreprise A | 2024 – 2025 | Paris | Prospection client, fidélisation, propositions commerciales, négociation, suivi des contrats et gestion CRM.\nAssistante commerciale | Entreprise B | 2019 – 2022 | Nanterre | Renouvellement de contrats, ventes additionnelles, gestion de base de données, relances et coordination administrative.\nEmployée administrative | Entreprise C | 2017 – 2018 | Paris | Assistance client, gestion des litiges et suivi administratif.</textarea></label><label>Formation<textarea id="education" rows="5">Master Négociation Commerciale Internationale | Université | 2014 | Paris\nLicence LEA Anglais-Allemand | Université | 2013 | Paris\nBTS Commerce International | Lycée | 2011 | Île-de-France</textarea></label><label>Langues<textarea id="languages" rows="4">Français langue maternelle\nAnglais courant\nAllemand notions professionnelles</textarea></label><label>Intérêts<textarea id="interests" rows="3">Théâtre\nSport\nEngagement associatif</textarea></label>
+    </section>
+    <section class="tab" id="tab-design"><h2>Design</h2><label>Modèle<select id="template"><option value="premium">Premium</option><option value="sidebar">Sidebar</option><option value="minimal">Minimal</option><option value="timeline">Timeline</option><option value="cards">Cartes</option><option value="luxury">Luxe</option></select></label><label>Couleur principale<input id="accent" type="color" value="#123047"></label><label>Couleur douce<input id="soft" type="color" value="#eaf0f4"></label><label>Police<select id="font"><option value="Inter, Arial, sans-serif">Inter</option><option value="Georgia, serif">Serif luxe</option><option value="Arial, sans-serif">Arial</option></select></label></section>
+    <section class="tab" id="tab-export"><h2>Export</h2><p>Quand le CV est prêt, clique sur PDF. Choisis ensuite « Enregistrer en PDF » dans Chrome.</p><button id="print">Exporter PDF</button><button id="reset" class="ghost">Réinitialiser</button></section>
+  </aside>
+  <main class="workspace"><div class="topbar"><b>Aperçu direct</b><span id="modelName">Premium</span></div><section id="preview" class="paper premium"></section></main>
+  <script src="script.js"></script>
+</body>
 </html>
