@@ -1,28 +1,35 @@
-# Agent CV
+# CV Studio
 
-Petite application HTML/CSS/JS pour créer et personnaliser un CV avec aperçu en direct.
+V1 simple d'un éditeur de CV en React + Vite.
 
 ## Fonctionnalités
 
 - Panneau de configuration à gauche
-- Aperçu direct du CV à droite
-- 6 modèles visuels : Corporate, Minimaliste, LinkedIn, Timeline, Luxe, Cartes
+- Aperçu direct à droite
+- 6 modèles de CV
 - Couleurs personnalisables
 - Textes modifiables
-- Sauvegarde locale automatique dans le navigateur
-- Export PDF via le bouton Imprimer
+- Sauvegarde automatique dans le navigateur
+- Export PDF via impression
 
-## Utilisation
+## Tester en local
 
-Ouvrir `index.html` dans un navigateur.
+```bash
+npm install
+npm run dev
+```
 
-Pour publier en ligne :
+Puis ouvrir l'adresse indiquée par Vite.
 
-1. Aller dans les paramètres du dépôt GitHub
-2. Ouvrir **Pages**
-3. Source : `Deploy from a branch`
-4. Branch : `main`
-5. Dossier : `/root`
-6. Enregistrer
+## Build
 
-Le site sera accessible via GitHub Pages après activation.
+```bash
+npm run build
+npm run preview
+```
+
+## Publication GitHub Pages
+
+Pour GitHub Pages avec Vite, il faudra ajouter une config de déploiement ou publier le dossier `dist` après build.
+
+Version actuelle : MVP volontairement simple pour tester rapidement l'interface avant d'ajouter des fonctions plus avancées.
